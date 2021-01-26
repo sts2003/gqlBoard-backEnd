@@ -1,0 +1,23 @@
+type Query {
+  getAllMainBoards(
+    searchValue: String!
+    limit: Int!
+    currentPage: Int!
+  ): [MainBoard!]!
+  getMainDetail(id: String!): MainBoard!
+  getMainBoardTotalPage(searchValue: String!, limit: Int!): Int!
+  getMainBoardTotalPageOnlyCnt(searchValue: String!, limit: Int!): Int!
+}
+
+type Mutation {
+  createMain(title: String!, description: String!, imagePath: String!): Boolean!
+
+  updateMain(
+    id: String!
+    title: String!
+    description: String!
+    imagePath: String!
+  ): Boolean!
+
+  deleteMain(id: String!): Boolean!
+}

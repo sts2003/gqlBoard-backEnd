@@ -1,0 +1,7 @@
+type MainBoard {
+  _id: ID!
+  title: String!
+  description: String!
+  imagePath: String!
+  createdAt: String!
+}
